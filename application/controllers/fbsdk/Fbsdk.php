@@ -12,7 +12,7 @@ class Fbsdk extends CI_Controller {
 	
 	public function index()
 	{
-		$data['title'] = 'Hello Facebook';
+		$data['title'] = HEADER_TITLE;
 		
 		$data['my_adaccount'] = $this->Fbsdk_Model->get_account_info();
 	

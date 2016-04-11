@@ -2,14 +2,14 @@
 
 /* Controllers */
 
-var angularjsControllers = angular.module('angularjsControllers', []);
-
-angularjsControllers.controller('fbAccountCtrl', ['$scope', 'Fbaccount',
-  function($scope, Fbaccount) {
-    $scope.account_info = Fbaccount.query();
-    
-//    $scope.orderProp = 'age';
-  }]);
+//var angularjsControllers = angular.module('angularjsControllers', []);
+//
+//angularjsControllers.controller('fbAccountCtrl', ['$scope', 'Fbaccount',
+//  function($scope, Fbaccount) {
+//    $scope.account_info = Fbaccount.query();
+//    
+////    $scope.orderProp = 'age';
+//  }]);
 
 //
 //phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',

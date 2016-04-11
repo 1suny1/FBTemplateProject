@@ -15,7 +15,7 @@ class Database_Sample extends CI_Controller {
 		//for debug
 		$this->Database_Sample_Model->get_sql();
 		
-		$data['title'] = 'DB Sample';
+		$data['title'] = HEADER_TITLE;
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('database/read', $data);

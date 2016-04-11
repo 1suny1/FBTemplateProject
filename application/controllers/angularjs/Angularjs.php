@@ -1,20 +1,33 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Angularjs extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 	
 		$this->load->model('fbsdk/Fbsdk_Model');
-		$this->load->helper('url');
-		$this->load->library('FacebookLib');
 	}
 	
 	public function index()
 	{
-		$data['title'] = 'Hello Angularjs';
-	
-// 		$this->load->view('templates/header', $data);
+		$data = $this->template_data;
+		
+		// 		add_css(array('business-casual.css'));
+		add_css('business-casual.css');
+		$data['header_css'] = put_headers();
+		
+		add_js(array('angular/angular.js', 
+				'angular-route/angular-route.js', 
+				'angular-resource/angular-resource.js',
+				'custom/angularjs/app.js',
+				'custom/angularjs/controllers.js',
+				'custom/angularjs/services.js',
+		));
+		$data['footer_js'] = put_footers();
+		
+		$this->load->view('templates/header', $data);
 		$this->load->view('angularjs/read', $data);
-// 		$this->load->view('templates/footer');
+		$this->load->view('templates/footer', $data);
 	}
 	
 	public function hello() {

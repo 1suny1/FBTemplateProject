@@ -2,7 +2,8 @@
 <html lang="en" ng-app="templateApp">
 
 <head>
-
+	<base href='<?php echo base_url() ?>' />
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +11,13 @@
     <meta name="author" content="">
 
 <!--     <title>Business Casual - Start Bootstrap Theme</title> -->
-	<title><?= $title; ?></title>
+	<title><?= isset($title)?$title:''; ?></title>
+	
+	<?= isset($header_css)?$header_css:''; ?>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url("/css/bootstrap.min.css") ?>" rel="stylesheet">
+    <!-- Bootstrap Core CSS <link href="<?php echo base_url("/css/bootstrap.min.css") ?>" rel="stylesheet"> -->
 
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url("/css/business-casual.css") ?>" rel="stylesheet">
+    <!-- Custom CSS <link href="<?php echo base_url("/css/business-casual.css") ?>" rel="stylesheet">-->
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -32,8 +33,7 @@
 </head>
 
 <body>
-
-    <div class="brand">Business Casual</div>
+    <div class="brand">{{ 'TOP_MAIN_TITLE' | translate }}</div>
     <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
 
     <!-- Navigation -->
@@ -54,16 +54,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">{{ 'HOME' | translate }}</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">{{ 'ABOUT' | translate }}</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="blog.html">{{ 'BLOG' | translate }}</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">{{ 'CONTACT' | translate }}</a>
                     </li>
                 </ul>
             </div>
@@ -71,3 +71,4 @@
         </div>
         <!-- /.container -->
     </nav>
+    
