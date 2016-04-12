@@ -14,13 +14,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="<?php echo base_url("/images/slide-1.jpg") ?>" alt="">
+                                <img class="img-responsive img-full" src="images/slide-1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="<?php echo base_url("/images/slide-2.jpg") ?>" alt="">
+                                <img class="img-responsive img-full" src="images/slide-2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="<?php echo base_url("/images/slide-3.jpg") ?>" alt="">
+                                <img class="img-responsive img-full" src="images/slide-3.jpg" alt="">
                             </div>
                         </div>
 
@@ -31,18 +31,10 @@
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                             <span class="icon-next"></span>
                         </a>
-                    </div>
-<?php 
-	if (isset($user)) {
-		echo $user->NAME.', '.$user->REG_DATE;
-	}
-	if (isset($user->REG_USER)) {
-		echo $user->REG_USER;	//nl2br()
-	}
-?>                    
+                    </div>                 
                     <h2 class="brand-before">
-                    	<small>Hello <?php echo $user_name; ?></small>
-                        <small>Welcome to</small>
+                    	<small>Hello</small>
+                        <small>Welcome to !</small>
                     </h2>
                     <h1 class="brand-name">Business Casual</h1>
                     <hr class="tagline-divider">
@@ -63,7 +55,7 @@
                         <strong>worth visiting</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="/TemplateProject/images/intro-pic.jpg" alt="">
+                    <img class="img-responsive img-border img-left" src="images/intro-pic.jpg" alt="">
                     <hr class="visible-xs">
                     <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
                     <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>

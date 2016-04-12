@@ -38,7 +38,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+        <div class="container" ng-controller="templateAppCtrl">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -66,6 +66,9 @@
                         <a href="contact.html">{{ 'CONTACT' | translate }}</a>
                     </li>
                 </ul>
+            </div>
+            <div>
+            	<a href ng-click="setLang('en')">English</a>/<a href ng-click="setLang('kr')">한글</a>
             </div>
             <!-- /.navbar-collapse -->
         </div>
